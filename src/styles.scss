@@ -1,0 +1,119 @@
+*, *:before, *:after {
+  box-sizing:border-box;
+}
+
+a, a:link, a:visited, a:active {
+  text-decoration: none;
+}
+// @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('./fonts/proximanova-regular-webfont.woff2') format('woff2'),
+  url('./fonts/proximanova-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body, select, option, input, code, pre {
+  font-size: 1rem;
+  font-family: ProximaNova;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  // background: #fafafa;
+  background-color: rgba(255, 255, 255, .4);
+  padding-top: 60px;
+  font-family: 'Poppins', sans-serif;
+
+  ng-component {
+    display: block;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+.help-block {
+  font-size: 12px;
+}
+
+.navbar {
+  margin-bottom: 10px;
+
+  .navbar-brand {
+    width: 90px;
+  }
+}
+
+.breadcrumb {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.nav-pills {
+  padding-left: 4px;
+
+  >li >a {
+    border-radius: 4px 4px 0 0;
+    padding: 4px 8px;
+  }
+}
+
+.tab-content {
+  /* color: white; */
+  border: 0 solid #428bca;
+  border-top-width: 2px;
+  padding: 8px 4px;
+}
+
+.alert {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.alert-dismissable .close, .alert-dismissible .close {
+  right: 0;
+}
+
+[class^="col-*"] {
+  padding: 8px 4px;
+}
+
+.main-navigation {
+  position: fixed;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid rgba(255,255,255,0.3);
+  background-color: rgba(0,0,0,0.8);
+  border-top: 0;
+  z-index: 10000;
+  transition: 0.5s ease-out;
+}
+.main-navigation:hover {
+  top: 0;
+}
+.main-navigation a {
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 2rem;
+  color: white!important;
+}
+.main-navigation a.one:hover {
+  background: #0092B2;
+}
+.main-navigation a.two:hover {
+  background: #776045;
+}
+.main-navigation a.three:hover {
+  background: #A8C545;
+}
+.main-navigation a.four:hover {
+  background: #DFD3B6;
+}

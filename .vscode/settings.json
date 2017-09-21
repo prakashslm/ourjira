@@ -1,0 +1,33 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.wordWrap": "on",
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    // "**/.*": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/CVS": true,
+    "node_modules/": true,
+    "**/*.js": {
+      "when": "$(basename).ts|$(basename).tsx"
+    },
+    "**/*.map": {
+      "when": "$(basename).ts|$(basename).tsx"
+    },
+    "**/*.css": {
+      "when": "$(basename).less|$(basename).scss"
+    }
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/typings": true,
+    "**/*.js": true
+  },
+  "typescript.useCodeSnippetsOnMethodSuggest": true,
+  "http.proxy": "http://58.2.221.9:80"
+}

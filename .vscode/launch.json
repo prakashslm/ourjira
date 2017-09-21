@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // {
+    //   "type": "chrome",
+    //   "request": "launch",
+    //   "name": "Launch Chrome against localhost",
+    //   "url": "http://localhost:4200",
+    //   "webRoot": "${workspaceRoot}"
+    // },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Attach to Chrome",
+      "urlFilter": "http://localhost:4200/*",
+      "port": 9222,
+      "sourceMaps": true,
+      "diagnosticLogging": true,
+      "webRoot": "${workspaceRoot}",
+      "userDataDir": "${workspaceRoot}/out/chrome"
+    }
+  ]
+}

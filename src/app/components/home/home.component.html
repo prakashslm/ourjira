@@ -1,0 +1,61 @@
+<div class="">
+  <h1>Hi {{currentUser?.firstName}}!</h1>
+  <p>You're logged in with Angular 2!!</p>
+  <h3>All registered users:</h3>
+  <!-- <ul>
+    <li *ngFor="let user of users">
+      {{user.username}} ({{user.firstName}} {{user.lastName}}) - <a (click)="deleteUser(user.id)">Delete</a>
+    </li>
+  </ul> -->
+  <form #ngForm="ngForm" novalidate autocomplete="false">
+    <input name="username" [(ngModel)]="username" placeholder="Username" required/>
+    <input name="firstName" [(ngModel)]="firstname" placeholder="First Name" />
+    <input name="lastName" [(ngModel)]="lastname" placeholder="Last Name" />
+    <search-box name="username1" [label]='"NgModel Works !"' [(ngModel)]="lastnameSearch"></search-box>
+    <div sample [data]="tdata" width="300px" height="240px"></div>
+  </form>
+
+  <table class="table table-hover table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th style="width: 180px;"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <ng-template [ngTemplateOutlet]="getTemplate(user)" [ngOutletContext]="{ $implicit: user, index: i }"></ng-template>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #displayTmpl let-user>
+    <td>{{user.username}}</td>
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>
+      <div style="width: 180px;">
+        <a [routerLink]="['edit', user.id]">{{user.username}}</a>
+        <button (click)="editContact(user)" class="btn btn-xs btn-info">Edit</button>
+      </div>
+    </td>
+  </ng-template>
+
+  <ng-template #editTmpl let-i="index">
+    <td><input type="text" [(ngModel)]="selectedUser.username" /></td>
+    <td><input type="text" [(ngModel)]="selectedUser.firstName" /></td>
+    <td><input type="text" [(ngModel)]="selectedUser.lastName" /></td>
+    <td>
+      <div style="width: 180px;">
+        <button (click)="saveContact(i)" class="btn btn-xs btn-success">Save</button>
+        <button (click)="reset()" class="btn btn-xs btn-info">Cancel</button>
+        <button (click)="deleteUser(user.id)" class="btn btn-xs btn-danger">Delete</button>
+        <a (click)="deleteUser(user.id)" class="btn btn-xs btn-danger">Delete</a>
+      </div>
+    </td>
+  </ng-template>
+
+  <bar-graph bind-data="graphData" width="400" height="150"></bar-graph>
+</div>
