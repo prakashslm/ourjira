@@ -7,12 +7,13 @@
       {{user.username}} ({{user.firstName}} {{user.lastName}}) - <a (click)="deleteUser(user.id)">Delete</a>
     </li>
   </ul> -->
-  <form #ngForm="ngForm" novalidate autocomplete="false">
+  <form #ngForm="ngForm" novalidate autocomplete="false" highlight="gray" fontSize="12px">
     <input name="username" [(ngModel)]="username" placeholder="Username" required/>
     <input name="firstName" [(ngModel)]="firstname" placeholder="First Name" />
     <input name="lastName" [(ngModel)]="lastname" placeholder="Last Name" />
     <search-box name="username1" [label]='"NgModel Works !"' [(ngModel)]="lastnameSearch"></search-box>
-    <div sample [data]="tdata" width="300px" height="240px"></div>
+     <div sample [data]="tdata" width="300px" height="240px"></div> 
+    <svg sample [data]="tdata" width="300px" height="240px" [type]="'svg'"></svg>
   </form>
 
   <table class="table table-hover table-striped table-bordered">

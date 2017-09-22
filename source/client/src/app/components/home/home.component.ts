@@ -40,7 +40,7 @@ export class HomeComponent implements OnDestroy, OnInit, AfterViewChecked {
     this.loadAllUsers();
 
     const t = setTimeout(() => {
-      this.tdata = [10, 20, 30, 40, 60, 10, 20, 30, 40, 60]
+      this.tdata = [10, 20, 90, 40, 60, 80];
       clearTimeout(t);
     }, 2000);
   }

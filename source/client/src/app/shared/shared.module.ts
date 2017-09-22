@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AlertService, PubSubService } from './services';
 import { LoaderComponent, AlertComponent, PageNotFoundComponent, ErrorComponent, SearchBox } from './components/index';
 import { SpinnerComponent } from './components/spinner/spinner.component';
-import { SampleDirective } from './directives';
+import { SampleDirective, HighlightDirective } from './directives';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { SampleDirective } from './directives';
     , SpinnerComponent
     , SearchBox
     , SampleDirective
+    , HighlightDirective
   ],
   imports: [
     CommonModule
@@ -37,6 +38,7 @@ import { SampleDirective } from './directives';
     , SpinnerComponent
     , SearchBox
     , SampleDirective
+    , HighlightDirective
   ],
   providers: [
     DatePipe

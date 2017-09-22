@@ -117,3 +117,36 @@ a {
 .main-navigation a.four:hover {
   background: #DFD3B6;
 }
+
+.chart {
+  background: #eee;
+  padding: 3px;
+  div {
+    width: 0;
+    transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    font: 10px sans-serif;
+    background-color: steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 5px;
+    color: white;
+    box-shadow: 2px 2px 2px #666;
+  }
+  .axis path, .axis line {
+    stroke: #999;
+  }
+  .axis text {
+    fill: #999;
+  }
+
+  rect {
+    fill: steelblue;
+  }
+  text {
+    fill: white;
+    font: 10px sans-serif;
+    text-anchor: end;
+  }
+}
