@@ -4,10 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "serve:mock": "ng serve --env=mock",
+    "start": "ng serve -p=4201 -o",
+    "startte": "ng serve --port=4201 --open",
+    "start1": "start http://localhost:4201 & ng serve -p 4201",
+    "serve:mock": "ng serve --env=mock --open",
     "build": "ng build",
-    "build:prod": "ng build --prod --aot --output-hashing none",
+    "build:prod": "ng build --prod --aot --output-hashing none --output=dist/prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

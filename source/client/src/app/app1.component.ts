@@ -18,7 +18,12 @@ import { AlertService } from '@shared/services/index';
 
 @Component({
   selector: 'app1-root',
-  template: '<app-layout1></app-layout1>'
+  // template: '<app-layout1></app-layout1>'
+  template: `<app-partial>
+  <div class="side-bar-content"><li><a href="">from app comp</a></li></div>
+  <div class="main-content">from app comp</div>
+  // <router-outlet></router-outlet>
+  </app-partial>`
 })
 export class App1Component implements OnInit, AfterViewInit, OnDestroy {
   title = 'welcome to our application';

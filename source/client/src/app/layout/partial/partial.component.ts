@@ -3,13 +3,13 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs/Rx';
 
 @Component({
-  selector: 'app-partial-collapse',
-  templateUrl: './partial-collapse.component.html',
-  styleUrls: ['./partial-collapse.component.css'],
+  selector: 'app-partial',
+  templateUrl: './partial.component.html',
+  styleUrls: ['./partial.component.scss'],
   // animations: [fadeInAnimation],
   // host: { '[@fadeInAnimation]': 'true' }
 })
-export class PartialCollapseComponent implements OnDestroy, OnInit {
+export class PartialComponent implements OnDestroy, OnInit {
   unSubscription: { [index: string]: Subscription; } = {};
 
   constructor() {

@@ -19,7 +19,7 @@ import { AuthenticationService, UserService } from './services/index';
 @NgModule({
   declarations: [
     AppComponent
-    // , App1Component
+    , App1Component
     , routedComponents
   ],
   imports: [
@@ -40,7 +40,7 @@ import { AuthenticationService, UserService } from './services/index';
   schemas: [
     NO_ERRORS_SCHEMA
   ],
-  bootstrap: [AppComponent]
-  // bootstrap: [App1Component]
+  // bootstrap: [AppComponent]
+  bootstrap: [App1Component]
 })
 export class AppModule { }

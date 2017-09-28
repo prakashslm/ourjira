@@ -4,6 +4,7 @@ import { MockBackend } from '@angular/http/testing';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
+import { App1Component } from './app1.component';
 // import { DataMockService } from './mocks/data-mock.service';
 import { fakeBackendProvider } from './helpers/index';
 
@@ -24,6 +25,7 @@ import { fakeBackendProvider } from './helpers/index';
     , MockBackend
     , fakeBackendProvider
   ],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent]
+  bootstrap: [App1Component]
 })
 export class AppMockModule { }

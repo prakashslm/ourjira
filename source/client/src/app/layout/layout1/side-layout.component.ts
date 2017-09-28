@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnDestroy, OnInit } from '@angular/core';
 
 import { Subscription } from 'rxjs/Rx';
 
@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs/Rx';
   selector: 'app-layout1',
   templateUrl: './side-layout.component.html',
   styleUrls: ['./side-layout.component.scss'],
+  encapsulation: ViewEncapsulation.None
   // animations: [fadeInAnimation],
   // host: { '[@fadeInAnimation]': 'true' }
 })

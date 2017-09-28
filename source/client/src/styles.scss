@@ -1,11 +1,4 @@
-*, *:before, *:after {
-  box-sizing:border-box;
-}
-
-a, a:link, a:visited, a:active {
-  text-decoration: none;
-}
-// @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 
 @font-face {
   font-family: 'ProximaNova';
@@ -15,20 +8,29 @@ a, a:link, a:visited, a:active {
   font-style: normal;
 }
 
-html, body, select, option, input, code, pre {
-  font-size: 1rem;
-  font-family: ProximaNova;
+// $font-stack     : Helvetica, 'Poppins', 'ProximaNova', sans-serif;
+$font-stack     : 'Poppins', 'ProximaNova', sans-serif;
+$brand-green    : hsl(60, 30%, 50%);
+$light-border   : lighten($brand-green, 30%);
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
+a, a:link, a:visited, a:active {
+  text-decoration: none;
+}
+
+html, body, select, option, input, code, pre, ul {
+  font-size: 1rem;
 }
 
 body {
   // background: #fafafa;
-  background-color: rgba(255, 255, 255, .4);
-  padding-top: 60px;
-  font-family: 'Poppins', sans-serif;
+  // background-color: rgba(255, 255, 255, .4);
+  background-color: $light-border;
+  // padding-top: 60px;
+  font-family: $font-stack;
 
   ng-component {
     display: block;
