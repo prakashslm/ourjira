@@ -2,7 +2,8 @@ import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
 
 import { PageNotFoundComponent } from '@shared/components/index';
 
-import { HomeComponent, LoginComponent } from './components/index';
+import { HomeComponent, AdminComponent, LoginComponent } from './components/index';
+
 // import { LoginComponent } from './login/index';
 // import { RegisterComponent } from './register/index';
 import { AuthGuard } from './core';
@@ -12,6 +13,12 @@ const appRoutes: Routes = [
     path: 'home', component: HomeComponent, canActivate: [AuthGuard]
     , data: {
       animation: { value: 'home' }
+    }
+  },
+  {
+    path: 'admin', component: AdminComponent, canActivate: [AuthGuard]
+    , data: {
+      animation: { value: 'admin' }
     }
   },
   { path: 'projects', component: HomeComponent },
@@ -43,4 +50,4 @@ export const routing = RouterModule.forRoot(appRoutes, {
   , preloadingStrategy: PreloadAllModules
 });
 
-export const routedComponents = [HomeComponent, LoginComponent];
+export const routedComponents = [HomeComponent, AdminComponent, LoginComponent];

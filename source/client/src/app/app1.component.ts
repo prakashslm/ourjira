@@ -16,6 +16,8 @@ import * as moment from 'moment';
 
 import { AlertService } from '@shared/services/index';
 
+export type ScreenWidth = 'xs' | 'sm' | 'md' | 'lg';
+
 @Component({
   selector: 'app1-root',
   // template: '<app-layout1></app-layout1>'

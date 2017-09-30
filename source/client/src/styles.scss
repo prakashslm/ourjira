@@ -1,4 +1,8 @@
+@charset 'UTF-8';
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+// @import '~@angular/material/core/theming/theming';
+@import 'src/app/core/scss/theme';
+@import 'src/app/core/scss/themes/default.theme';
 
 @font-face {
   font-family: 'ProximaNova';
@@ -7,11 +11,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-// $font-stack     : Helvetica, 'Poppins', 'ProximaNova', sans-serif;
-$font-stack     : 'Poppins', 'ProximaNova', sans-serif;
-$brand-green    : hsl(60, 30%, 50%);
-$light-border   : lighten($brand-green, 30%);
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -25,12 +24,23 @@ html, body, select, option, input, code, pre, ul {
   font-size: 1rem;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 body {
   // background: #fafafa;
   // background-color: rgba(255, 255, 255, .4);
-  background-color: $light-border;
+  // background-color: $primary-background-body;
   // padding-top: 60px;
   font-family: $font-stack;
+  font-weight: 400;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
 
   ng-component {
     display: block;
@@ -68,8 +78,7 @@ a {
 }
 
 .tab-content {
-  /* color: white; */
-  border: 0 solid #428bca;
+  border-style: solid;
   border-top-width: 2px;
   padding: 8px 4px;
 }
@@ -105,7 +114,7 @@ a {
   padding: 10px 15px;
   display: inline-block;
   font-size: 2rem;
-  color: white!important;
+  color: $white-color !important;
 }
 .main-navigation a.one:hover {
   background: #0092B2;
@@ -121,19 +130,16 @@ a {
 }
 
 .chart {
-  background: #eee;
   padding: 3px;
   div {
     width: 0;
     transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
     -webkit-transition: all 1s ease-out;
-    font: 10px sans-serif;
     background-color: steelblue;
     text-align: right;
     padding: 3px;
     margin: 5px;
-    color: white;
     box-shadow: 2px 2px 2px #666;
   }
   .axis path, .axis line {
@@ -152,3 +158,32 @@ a {
     text-anchor: end;
   }
 }
+@include themestyles();
+
+/* Theme: orange */
+@import './app/core/scss/themes/orange.theme';
+
+// body {
+//   background-color: $primary-color-test;
+//   padding: my-calculation-function(10px, 5px);
+//   // width: calc-percent(650px, 1000px);
+// }
+
+// @include media(320px) {
+//   background: red;
+// }
+
+// @include keyframes(fadeIn) {
+//   from {
+//     opacity: 0%;
+//   }
+//   to {
+//     opacity: 100%;
+//   }
+// }
+
+
+/* Theme: Styles
+@import 'themes/theme2';
+@include themestyles();
+*/

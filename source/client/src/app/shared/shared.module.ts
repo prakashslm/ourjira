@@ -8,6 +8,7 @@ import { AlertService, PubSubService } from './services';
 import { LoaderComponent, AlertComponent, PageNotFoundComponent, ErrorComponent, SearchBox } from './components/index';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SampleDirective, HighlightDirective } from './directives';
+import { EllipsisPipe } from './pipes';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { SampleDirective, HighlightDirective } from './directives';
     , SearchBox
     , SampleDirective
     , HighlightDirective
+
+    , EllipsisPipe
   ],
   imports: [
     CommonModule
@@ -39,6 +42,8 @@ import { SampleDirective, HighlightDirective } from './directives';
     , SearchBox
     , SampleDirective
     , HighlightDirective
+
+    , EllipsisPipe
   ],
   providers: [
     DatePipe

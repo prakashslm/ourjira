@@ -1,0 +1,41 @@
+$theme-name               : 'default';
+
+$path                     : '/assets/images/';
+
+$black-color              : #000;
+$white-color              : #FFFFFF !default;
+
+// $font-stack               : 'Poppins', 'ProximaNova', Helvetica, arial, sans-serif;
+// 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif
+$font-stack               : 'ProximaNova', Helvetica, arial, sans-serif;
+$font-size                : 24px;
+
+// $accent-color           : red;
+// $primary-font-size       : 24px;
+$primary-color            : #3c3d3e !default;
+
+$primary-bg-body          : darken($primary-color, 5%);
+$primary-bg               : #3c3d3e;
+$brand-green              : hsl(60, 30%, 50%);
+$light-border             : lighten($brand-green, 30%);
+
+$accent-color           : #eac01b;
+
+$primary-background     : #3c3d3e;
+
+$scrollbar-face-color           : darken($primary-background, 30%);
+$scrollbar-track-color          : darken($primary-background, 30%);
+$scrollbar-arrow-color          : darken($primary-background, 30%);
+$scrollbar-highlight-color      : darken($primary-background, 30%);
+$scrollbar-darkshadow-color     : darken($primary-background, 50%);
+$scrollbar-shadow-color         : darken($primary-background, 30%);
+
+$navbar-color           : lighten($accent-color, 30%);
+$navbar-active-color    : lighten($primary-background, 40%);
+$navbar-head-color      : darken($primary-background, 30%);
+
+$brand-green            : hsl(60, 30%, 50%);
+$light-border           : lighten($brand-green, 30%);
+
+$watermark              : lighten($brand-green, 30%);
+$checkbox               : linear-gradient(#484848 0%, #4b4b4b 15%, #545454 30%, #676767 60%, #717171 100%);

@@ -1,0 +1,13 @@
+$theme-name             : 'orange';
+
+$path                   : '/assets/images/';
+$primary-color          : red !default;
+$font-size      : 24px;
+
+
+// $font-stack            : Helvetica, 'Poppins', 'ProximaNova', sans-serif;
+$font-stack               : 'Poppins', 'ProximaNova', sans-serif;
+$primary-background       : #3c3d3e;
+$primary-background-body  : darken($primary-background, 5%);
+$brand-green              : hsl(60, 30%, 50%);
+$light-border             : lighten($brand-green, 30%);
